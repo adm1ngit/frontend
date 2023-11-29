@@ -1,0 +1,37 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.16",
+    "@heroicons/vue": "^2.0.18",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.4",
+    "@videojs-player/vue": "^1.0.0",
+    "axios": "^1.6.2",
+    "flowbite": "^1.8.1",
+    "headroom.js": "^0.12.0",
+    "pinia": "^2.1.6",
+    "video.js": "^8.6.1",
+    "vue": "^3.3.4",
+    "vue-headroom": "^0.10.1",
+    "vue-router": "^4.2.4",
+    "vue3-carousel": "^0.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.1",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "sass-mixins": "^0.13.0",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9"
+  }
+}
