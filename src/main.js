@@ -7,7 +7,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://walrus-app-8p5bd.ondigitalocean.app/'
+axios.defaults.baseURL = 'https://walrus-app-8p5bd.ondigitalocean.app'
 
 const app = createApp(App)
 
