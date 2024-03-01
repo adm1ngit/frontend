@@ -131,7 +131,9 @@ export default defineComponent({
     <section class="bg-gray-800 ml-4 mr-4 rounded-xl" v-else>
         <div class="p-5 text-center">
             <div class="md:p-12 p-3 shadow bg-gradient-to-r from-[#2b2b45] to-[#0d0852] rounded-xl">
-                <h3 class="text-2xl font-serif font-semibold leading-7 text-gray-200">NOXONFX ONLAYN TA’LIM PLATFORMASI</h3>
+                <h3 class="text-2xl font-serif font-semibold leading-7 text-gray-200">
+                    NOXON AKADEMIY 3.0 ONLAYN TA’LIM PLATFORMASI
+                </h3>
                 <p class="text-xl font-mono mt-5 leading-8 text-gray-200">
                     Tradingga oid kasblarni o’rgatamiz
                 </p>
@@ -150,17 +152,7 @@ export default defineComponent({
                         "Istalgan joyda, o’zingizga qulay vaqtda o’qish imkoniyati"
                     </p>
                 </blockquote>
-                <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                    <img class="w-6 h-6 rounded-full"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                        alt="profile picture">
-                    <div class="flex items-center divide-x-2 divide-gray-500">
-                        <div class="pr-3 font-medium text-gray-100">Micheal Gough</div>
-                        <div class="pl-3 text-sm font-light text-gray-300">CEO at Google</div>
-                    </div>
-                </figcaption>
             </figure>
         </div>
     </section>
 </template>
-

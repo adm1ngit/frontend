@@ -20,6 +20,7 @@ export default {
 		return {
 			loading: true,
 			modeuls: [],
+			open: null,
 		};
 	},
 
@@ -33,6 +34,9 @@ export default {
 	},
 
 	methods: {
+		toggle(id) {
+			this.open = this.open === id ? null : id
+		},
 		getModuls() {
 			const config = {
 				headers: {
@@ -132,17 +136,16 @@ export default {
 								<span class="flex-1 ml-3 whitespace-nowrap">Cores</span>
 							</RouterLink>
 						</li>
-						<li v-if="modeuls" v-for="modul in modeuls" :key="modul.id">
+						<li v-if="modeuls" v-for="menu in modeuls" :key="menu.id">
 							<a class="flex items-center p-2 text-base text-gray-300 cursor-pointer hover:bg-gray-700 font-semibold rounded-full group"
-								:aria-controls="'dropdown-pages-' + modul.id"
-								:data-collapse-toggle="'dropdown-pages-' + modul.id">
+								@click="toggle(menu.id)">
 								<svg class="ms-3 w-4 h-4 text-gray-300 transition duration-75" aria-hidden="true"
 									xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
 									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
 										stroke-width="2"
 										d="M1 5h18M1 5v14h18V5M1 5V1h18v4M5 5l3-4m1.215 4 3-4m1.215 4 3-4M8.007 8v8l5.416-4-5.416-4Z" />
 								</svg>
-								<span class="flex-1 ml-3 text-left whitespace-nowrap">{{ modul.name }}</span>
+								<span class="flex-1 ml-3 text-left whitespace-nowrap">{{ menu.name }}</span>
 								<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
 									xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd"
@@ -150,8 +153,8 @@ export default {
 										clip-rule="evenodd"></path>
 								</svg>
 							</a>
-							<ul :id="'dropdown-pages-' + modul.id" class="hidden py-2 space-y-2">
-								<li v-for="video in modul.videos" :key="video.id">
+							<ul v-show="menu.id === open" class="py-2 space-y-2">
+								<li v-for="video in menu.videos" :key="video.id">
 									<a :href="`/video/${video.id}`"
 										class="flex items-center p-2 pl-11 w-full text-sm font-medium text-gray-200 rounded-full transition group hover:bg-gray-700">
 										<svg class="mr-2 w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -179,17 +182,17 @@ export default {
 							</RouterLink>
 						</li>
 					</ul>
-				</div>
-				<div class="absolute bottom-0 left-0 justify-start p-4 space-x-4 w-full lg:flex">
-					<a @click="logout"
-						class="flex items-center p-2 text-base text-gray-300 cursor-alias hover:bg-gray-600 font-semibold rounded-full group">
-						<svg class="ms-3 w-4 h-4 text-gray-300 transition duration-75" aria-hidden="true"
-							xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-								d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3" />
-						</svg>
-						<span class="flex-1 ml-1 mr-3 whitespace-nowrap">Logout</span>
-					</a>
+					<div class="justify-start mt-5 ml-1 space-x-4 lg:flex">
+						<a @click="logout"
+							class="flex items-center p-2 text-base text-gray-300 cursor-alias bg-gray-700 hover:bg-gray-600 font-semibold rounded-full group">
+							<svg class="ms-3 w-4 h-4 text-gray-300 transition duration-75" aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3" />
+							</svg>
+							<span class="flex-1 ml-1 mr-3 whitespace-nowrap">Logout</span>
+						</a>
+					</div>
 				</div>
 			</aside>
 		</div>
