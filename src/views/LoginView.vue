@@ -65,7 +65,7 @@ export default {
             </div>
             <div class="mb-5 text-center">
                 <p class="mt-2 text-xs text-dark">
-                    <a class="font-extrabold" href="https://t.me/@noxonfx_uzbot">@noxonfx_uzbot</a> telegram botiga
+                    <a class="font-extrabold" href="https://t.me/noxonfxusers_bot">@noxonfxusers_bot</a> telegram botiga
                     kiring<br>va 1
                     daqiqalik kodingizni oling.
                 </p>
