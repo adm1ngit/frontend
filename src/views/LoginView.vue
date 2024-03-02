@@ -65,9 +65,9 @@ export default {
             </div>
             <div class="mb-5 text-center">
                 <p class="mt-2 text-xs text-dark">
-                    <a class="font-extrabold" href="https://t.me/noxonfxusers_bot">@noxonfxusers_bot</a> telegram botiga
-                    kiring<br>va 1
-                    daqiqalik kodingizni oling.
+                    <a class="font-extrabold" href="https://t.me/noxonfx_uzbot">@noxonfx_uzbot</a> Telegram Botiga
+                    Kiring<br>va 1
+                    Daqiqalik Kodingizni Oling.
                 </p>
             </div>
             <div class="w-full max-w-sm p-4 bg-gray-100 border border-gray-100 rounded-lg shadow-2xl sm:p-6">
